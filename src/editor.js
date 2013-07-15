@@ -360,6 +360,7 @@
       , defaultStorage;
 
     self.settings = _mergeObjs(true, defaults, opts);
+    marked.defaults.breaks = true;
     
     var buttons = self.settings.button;
     self._fullscreenEnabled = typeof(buttons) === 'object' ? typeof buttons.fullscreen === 'undefined' || buttons.fullscreen : buttons === true;
